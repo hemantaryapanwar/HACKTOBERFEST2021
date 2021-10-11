@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+ int t,total=0;
+ cin>>t;
+ int result[t];
+ for(int i=1;i<=t;i++){
+  
+	int n,d,risk=0,nrisk=0,a,b; 
+      cin>>n>>d;
+       int age[n+1];
+       for(int j=1;j<=n;j++){
+       	cin>>age[j];
+       	
+	   }
+	   
+	  for(int k =1; k<=n ;k++  ){
+	  	if(age[k]>=80||age[k]<=9){
+	  		
+	  	risk++;
+		  }else{
+		  	nrisk++;
+		  }
+	  } 
+	   if(risk%d==0){
+	   	
+	   	total=total+ risk/d;
+	   	
+	   }else{
+	   	total=total+1+risk/d;
+	   		   
+
+	   }
+	   
+	   
+	   if(nrisk%d==0){
+	   	
+	   	total=total+ nrisk/d;
+	   	
+
+	   	
+	   }else{
+	   	total=total+1+nrisk/d;
+
+	   }
+	
+	   result[i]=total;
+	   
+	   total=0;
+	   
+	   
+	
+}
+
+  for(int i=1;i<=t;i++){
+  	cout<<result[i]<<endl;
+  }
+	return 0;
+}

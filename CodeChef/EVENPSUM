@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+int main(){
+unsigned long int a,b,x,y,a1,a2,b1,b2,r;
+int t;
+cin>>t;
+unsigned long int result[1001];
+
+for(int i=1;i<=t;i++){
+ cin>>a>>b;
+ if(a%2==0){
+ 	a1=a/2;
+ 	
+ 	b1=a/2;
+ } 
+ else {
+    a1=a/2;
+    
+    b1=(a+1)/2;
+ }
+ if(b%2==0){
+ 	a2=b/2;
+ 	
+ 	b2=b/2;
+ } else {
+    a2=b/2;
+    
+    b2=(b+1)/2;
+ }
+    
+    r=a1*a2 + b1*b2;
+    
+    result[i]=r;
+
+}
+
+for(int i=1;i<=t;i++){
+	
+	cout<<result[i]<<endl;
+}
+
+
+return 0;
+}
